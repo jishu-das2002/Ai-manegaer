@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router";
 import Root from "../Root/Root";
 import Errorpage from "../components/Errorpage";
-import Home from "../components/Home"; // <-- make sure the path is correct
+import Home from "../components/Home";
 import Register from "../pages/Register";
 
 const router = createBrowserRouter([
@@ -11,11 +11,11 @@ const router = createBrowserRouter([
     errorElement: <Errorpage />,
     children: [
       {
-        path: "home",        // child route (no leading slash)
-        element: <Home />,   // component for the route
+        path: "",     // <-- Default (index) route
+        element: <Home />,
       },
       {
-        path: "/register",
+        path: "register",
         element: <Register />,
       },
     ],

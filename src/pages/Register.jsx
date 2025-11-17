@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { 
-  getAuth, 
   createUserWithEmailAndPassword, 
   updateProfile, 
   GoogleAuthProvider, 
   signInWithPopup 
 } from "firebase/auth";
+import { auth } from "../Firebase/Firebase.config";
 import { toast } from "react-toastify";
 
 const Register = () => {
@@ -18,15 +18,12 @@ const Register = () => {
   });
 
   const navigate = useNavigate();
-  const auth = getAuth();
   const provider = new GoogleAuthProvider();
 
-  // ইনপুট পরিবর্তন হ্যান্ডেল করা
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // পাসওয়ার্ড ভ্যালিডেশন
   const validatePassword = (password) => {
     if (password.length < 6) {
       toast.error("পাসওয়ার্ড কমপক্ষে ৬ অক্ষরের হতে হবে");
@@ -43,18 +40,15 @@ const Register = () => {
     return true;
   };
 
-  // রেজিস্ট্রেশন হ্যান্ডেল করা
   const handleSubmit = (e) => {
     e.preventDefault();
 
     const { name, email, photoURL, password } = formData;
 
-    // পাসওয়ার্ড ভ্যালিডেশন চেক
     if (!validatePassword(password)) return;
 
-    createUserWithEmailAndPassword(auth, email, password)
+    createUserWithEmailAndEmailAndPassword(auth, email, password)
       .then((result) => {
-        // প্রোফাইল আপডেট (নাম + ছবি)
         updateProfile(result.user, {
           displayName: name,
           photoURL: photoURL
@@ -65,10 +59,10 @@ const Register = () => {
       })
       .catch((error) => {
         toast.error("Email already in use");
+        console.log(error);
       });
   };
 
-  // Google Sign-In
   const handleGoogleSignIn = () => {
     signInWithPopup(auth, provider)
       .then(() => {
