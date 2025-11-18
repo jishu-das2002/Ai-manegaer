@@ -75,71 +75,71 @@ const Register = () => {
   };
 
   return (
-    <div className="max-w-md mx-auto my-10 p-6 border rounded-lg shadow">
-      <h2 className="text-2xl font-bold mb-4 text-center">
-        Register for AI Model Inventory Manager
-      </h2>
+    <div className="bg-gradient-to-r from-teal-400 via-cyan-400 to-green-300 min-h-screen flex items-center justify-center">
+  <div className="max-w-md w-full p-6 border rounded-lg shadow bg-white">
+    <h2 className="text-2xl font-bold mb-4 text-center text-gray-800">
+      Register for AI Model Inventory Manager
+    </h2>
 
-      <form onSubmit={handleSubmit} className="space-y-3">
-        <input
-          type="text"
-          name="name"
-          placeholder="Name"
-          className="input input-bordered w-full"
-          onChange={handleChange}
-          required
-        />
+    <form onSubmit={handleSubmit} className="space-y-3">
+      <input
+        type="text"
+        name="name"
+        placeholder="Name"
+        className="input input-bordered w-full"
+        onChange={handleChange}
+        required
+      />
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Email"
-          className="input input-bordered w-full"
-          onChange={handleChange}
-          required
-        />
+      <input
+        type="email"
+        name="email"
+        placeholder="Email"
+        className="input input-bordered w-full"
+        onChange={handleChange}
+        required
+      />
 
-        <input
-          type="text"
-          name="photoURL"
-          placeholder="Photo URL"
-          className="input input-bordered w-full"
-          onChange={handleChange}
-        />
+      <input
+        type="text"
+        name="photoURL"
+        placeholder="Photo URL"
+        className="input input-bordered w-full"
+        onChange={handleChange}
+      />
 
-        <input
-          type="password"
-          name="password"
-          placeholder="Password"
-          className="input input-bordered w-full"
-          onChange={handleChange}
-          required
-        />
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        className="input input-bordered w-full"
+        onChange={handleChange}
+        required
+      />
 
-        <button
-          type="submit"
-          className="btn btn-primary w-full"
-        >
-          Register
-        </button>
-      </form>
+      <button type="submit" className="btn btn-primary w-full">
+        Register
+      </button>
+    </form>
 
-      <p className="mt-4 text-center">
-        Already have an account?{" "}
-        <Link to="/login" className="text-blue-600 underline">
-          Login
-        </Link>
-      </p>
+    <p className="mt-4 text-center text-gray-700">
+      Already have an account?{" "}
+      <Link to="/signin" className="text-blue-600 underline">
+        Login
+      </Link>
+    </p>
 
-      <div className="mt-4">
-        <button
-          onClick={handleGoogleSignIn}
-          className="btn btn-outline w-full"
-        >
-          Sign in with Google
-        </button>
-      </div>
+    <div className="mt-4">
+      <button
+        onClick={handleGoogleSignIn}
+        className="btn btn-outline w-full"
+      >
+        Sign in with Google
+      </button>
     </div>
+  </div>
+</div>
+
   );
 };
 

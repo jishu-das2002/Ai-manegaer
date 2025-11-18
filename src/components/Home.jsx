@@ -13,7 +13,8 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="space-y-16 p-6 md:p-12">
+    <div className="bg-gradient-to-r from-amber-500 to-pink-500 min-h-screen flex items-center justify-center">
+      <div className="space-y-16 p-6 md:p-12">
 
       {/* ---------------- DYNAMIC FEATURED SECTION ---------------- */}
       <section>
@@ -55,7 +56,7 @@ const Home = () => {
       </section>
 
       {/* ---------------- STATIC SECTION 2: GET STARTED ------------ */}
-      <section className="bg-gray-100 p-8 rounded-xl text-center">
+      <section className="bg-gradient-to-r from-blue-200 to-cyan-200 p-8 rounded-xl text-center">
         <h2 className="text-3xl font-bold mb-4">Get Started</h2>
         <p className="text-gray-700 mb-6">
           Create an account to start managing your AI models and build powerful
@@ -69,6 +70,7 @@ const Home = () => {
           Register Now
         </Link>
       </section>
+    </div>
     </div>
   );
 };
