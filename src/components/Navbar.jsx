@@ -37,10 +37,10 @@ const Navbar = () => {
                 <NavLink to="/">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/">All Models</NavLink>
+                <NavLink to="/Allmodels">All Models</NavLink>
               </li>
               <li>
-                <NavLink to="/">Add Model</NavLink>
+                <NavLink to="/Addmodel">Add Model</NavLink>
               </li>
               <li>
                 <NavLink to="/Signin">Signin</NavLink>
@@ -63,10 +63,10 @@ const Navbar = () => {
               <NavLink to="/" className="bg-gradient-to-r from-teal-400 to-yellow-200 p-4 rounded-4xl"> Home</NavLink>
             </li>
             <li className="ml-8">
-              <NavLink to="/"  className="bg-gradient-to-r from-teal-400 to-yellow-200 p-4 rounded-4xl">All Models</NavLink>
+              <NavLink to="/Allmodels"  className="bg-gradient-to-r from-teal-400 to-yellow-200 p-4 rounded-4xl">All Models</NavLink>
             </li>
             <li className="ml-8">
-              <NavLink to="/"  className="bg-gradient-to-r from-teal-400 to-yellow-200 p-4 rounded-4xl">Add Model</NavLink>
+              <NavLink to="/Addmodel"  className="bg-gradient-to-r from-teal-400 to-yellow-200 p-4 rounded-4xl">Add Model</NavLink>
             </li>
           </ul>
 
