@@ -16,6 +16,7 @@ const router = createBrowserRouter([
       {
         path: "",     // <-- Default (index) route
         element: <Home />,
+        loader: () => fetch('http://localhost:3000/ai-model')
       },
       {
         path: "register",
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       {
         path: "Allmodels",
         element:<Allmodels/>,
+        loader: () => fetch('http://localhost:3000/ai-model')
       },
      
     ],
